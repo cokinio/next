@@ -1,15 +1,15 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import { ActiveLink } from "./ActiveLink";
+import styles from "../components/Navbar.module.css" 
 
 const NavBar = () => {
-  return (
-    <nav>
-    <Link href="/">Home</Link>
-    <Link href="pagina">Pagina</Link>
-    <Link href="/blog">Blog</Link>
-  </nav>
+	return (
+		<nav className={styles['menu-container']}>
+			<ActiveLink text="Pagina" href="/pagina">Pagina</ActiveLink>
+			<ActiveLink text="Contact" href="/contact">Contact</ActiveLink>
+			<ActiveLink text="Home" href="/">Home</ActiveLink>
+		</nav>
+	);
+};
 
-  )
-}
-
-export default NavBar
+export default NavBar;
